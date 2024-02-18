@@ -5,7 +5,8 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven { url "http://maven.usehover.com/releases" }
+        maven { url "https://maven.usehover.com/snapshots" }
+        // maven { url "https://maven.usehover.com/releases" }
     }
 
     dependencies {
@@ -25,14 +26,15 @@ rootProject.allprojects {
     repositories {
         google()
         jcenter()
-        maven { url "http://maven.usehover.com/releases" }
+        maven { url "https://maven.usehover.com/snapshots" }
+        // maven { url "https://maven.usehover.com/releases" }
     }
 }
 
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 34
 
     defaultConfig {
         minSdkVersion 18
@@ -42,6 +44,11 @@ android {
     }
     dependencies {
 
-        implementation 'com.hover:android-sdk:1.7.2'
+        // implementation 'com.hover:android-sdk:1.7.3-noSMS'
+        implementation 'com.hover:android-sdk:2.0.0-alpha1.0.4-noSMS'
+        // implementation 'com.hover:android-sdk:2.0.0-beta02-noSMS'
+
+        // 2.0.0-beta02
+
     }
 }
